@@ -1,5 +1,5 @@
-int buttonPin = ______;     // the number of the pushbutton pin
-int ledPin = ______;      // the number of the LED pin
+int buttonPin = 2;     // the number of the pushbutton pin
+int ledPin = 3;     // the number of the LED pin
 
 // variables will change:
 int buttonState;         // variable for reading the pushbutton status
@@ -7,9 +7,9 @@ int ledState = LOW;	// variable to store the LED state: HIGH = on, LOW = off
 
 void setup() {
 
-  pinMode(___________, INPUT);     
+  pinMode(buttonPin, INPUT);     
 
-  pinMode(___________, OUTPUT);     
+  pinMode(ledPin, OUTPUT);     
  
  }
 
@@ -18,17 +18,17 @@ void loop(){
   buttonState = digitalRead( buttonPin );
 
   // If the button has been pressed, and the LED is OFF
-  if (buttonState == __________ && ledState == LOW) {     
+  if (buttonState == HIGH && ledState == LOW) {     
     // turn LED on:    
-    digitalWrite(__________ , __________ ); 
-    ledState = __________;
+    digitalWrite(ledPin , HIGH ); 
+    ledState = HIGH;
   } 
 
   //If the button has been pressed, and the LED is ON
-  else if (buttonState == __________ && ledState == HIGH) {    
+  else if (buttonState == HIGH && ledState == HIGH) {    
     // turn LED off:
-    digitalWrite(__________, __________); 
-    ledState =  __________;
+    digitalWrite(ledPin, LOW); 
+    ledState =  LOW;
   }
   delay(100);   // delay in order to give some time to read the button press
 		    //you can change this value and observe the difference
